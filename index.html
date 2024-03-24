@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO LIST</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONT -->
+
+    <!-- ICON -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- ICON -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- CSS -->
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div id="side-bar">
+          <h2>TDL</h2>
+          <nav>
+            <ul>
+              <li id="make-todo"><i data-feather="edit"></i></li>
+              <li id="check-todo"><i data-feather="check"></i></li>
+              <li id="clear-todo"><i data-feather="trash"></i></li>
+            </ul>
+          </nav>
+        </div>
+        <div id="add-search-activity">
+          <h2>Add & Search</h2>
+          <div class="activity-group">
+            <form id="search-activity-form">
+              <input
+                type="search"
+                id="search-activity"
+                placeholder="search your activity"
+              />
+              <i data-feather="search"></i>
+            </form>
+            <label for="add-activity" class="add-activity-label">
+              <button id="add-activity">Add Activity</button>
+            </label>
+          </div>
+        </div>
+        <div id="todo-list">
+          <h2>Your Activity</h2>
+        </div>
+      </div>
+    </main>
+    <!-- script js -->
+    <script src="js/script.js"></script>
+    <!-- script js -->
+    <!-- script icon -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- script icon -->
+  </body>
+</html>
