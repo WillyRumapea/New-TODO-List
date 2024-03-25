@@ -110,8 +110,12 @@ label.add-activity-label button#add-activity {
 }
 
 .button-box-add-activity {
-  width: 100px;
+  width: 180px;
   height: 18px;
+}
+
+.activies {
+  background-color: #fedaae;
 }
 /* add & search section */
 #todo-list {
@@ -121,4 +125,15 @@ label.add-activity-label button#add-activity {
   align-items: center;
   /* background-color: #15181f; */
   /* border: 1px solid; */
+}
+.container-todo-list {
+  width: 900px;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.todo-activity {
+  width: 200px;
+  height: 100px;
+  background-color: #f0f0fe;
 }
