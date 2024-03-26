@@ -127,13 +127,22 @@ label.add-activity-label button#add-activity {
   /* border: 1px solid; */
 }
 .container-todo-list {
-  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 800px;
   padding: 10px;
   border: 1px solid #000;
 }
 
 .todo-activity {
-  width: 200px;
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  font-size: 18px;
+  width: 210px;
+  height: 270px;
   background-color: #f0f0fe;
 }

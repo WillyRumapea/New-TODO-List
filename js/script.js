@@ -8,6 +8,8 @@ const activityGroup = document.getElementsByClassName("activity-group")[0];
 const containerTodoList = document.getElementsByClassName(
   "container-todo-list"
 )[0];
+// array sebagai penampung object activitas
+const activities = [];
 
 addActivity.addEventListener("click", () => {
   // mebuat element box activity
@@ -49,9 +51,6 @@ addActivity.addEventListener("click", () => {
   boxAddActivity.appendChild(buttonCLose);
   activityGroup.appendChild(boxAddActivity);
 
-  // array sebagai penampung object activitas
-  const activities = [];
-
   // event yang terjadi ketika button di klik
   buttonBoxAddActivity.addEventListener("click", () => {
     // menampung semua nilai dari box add activity
@@ -71,6 +70,7 @@ addActivity.addEventListener("click", () => {
     const detailActivity = document.createElement("p");
     const dateActivity = document.createElement("p");
     const todoActivity = document.createElement("div");
+    const buttonAddActivityInCard = document.createElement("button");
 
     // memberikan style pada setiap komponen
     todoActivity.className = "todo-activity";
@@ -79,11 +79,13 @@ addActivity.addEventListener("click", () => {
     titleActivity.textContent = activityComponent.title;
     detailActivity.textContent = activityComponent.detail;
     dateActivity.textContent = activityComponent.date;
+    buttonAddActivityInCard.textContent = "add activity";
 
     // memasukkan setiap anggota kedalam element induknya
     todoActivity.appendChild(titleActivity);
     todoActivity.appendChild(detailActivity);
     todoActivity.appendChild(dateActivity);
+    todoActivity.appendChild(buttonAddActivityInCard);
     containerTodoList.appendChild(todoActivity);
 
     // melakukan push ke dalam array activities
@@ -95,4 +97,19 @@ addActivity.addEventListener("click", () => {
   });
   // mencetak kedalam console
   console.log(activities);
+});
+
+searchActivity.addEventListener("input", () => {
+  let activitySearched = searchActivity.value.toLowerCase();
+
+  for (i = 0; i < activities.length; i++) {
+    if (activities[i].title === activitySearched) {
+      const todoActivity = containerTodoList.children[i];
+
+      todoActivity.style.backgroundColor = "#ddedde";
+    } else {
+      const todoActivity = containerTodoList.children[i];
+      todoActivity.style.backgroundColor = "#f0f0ffe";
+    }
+  }
 });
